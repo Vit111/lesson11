@@ -134,6 +134,13 @@ a:focus:after {
     float: left;
 }
 
+.img>a {
+    height: 3px;
+    width: 0%;
+    background-color: red;
+    transition: all 0.8s;
+}
+
 .title li {
     display: inline-block;
 }
@@ -161,6 +168,7 @@ a:focus:after {
     padding: 12px;
     background-color: #FFFFFF;
     transition: all 0.3s;
+    border: 2px solid #F13C6E;
     /* overflow: hidden; */
 }
 
@@ -172,16 +180,16 @@ a:focus:after {
     background: blue;
     border-radius: 40px;
     top: 0;
-    left: 100%;
-    opacity: 0.1;
+    left: 0;
+    opacity: 0;
     transition: all 1s;
     visibility: hidden;
 }
 
 .title_call:hover:before {
-    border: 2px solid #F13C6E;
     left: 0;
     visibility: visible;
+    opacity: 0.3;
 }
 
 .heading {
@@ -265,7 +273,7 @@ a:focus:after {
 }
 
 .body:after {
-    content: "CHAIR";
+    content: "";
     color: rgb(0, 255, 255);
     text-align: center;
     font-size: 200px;
@@ -354,12 +362,13 @@ a:focus:after {
 .aside:hover .section_image {
     opacity: 1;
     transition: all 3s;
-    transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(360deg);
+    overflow: hidden;
 }
 
 .section_image {
-    opacity: 0;
-    transform: scale(0) rotate(180deg);
+    opacity: 1;
+    transform: scale(1) rotate(0);
 }
 
 .aside:before {
@@ -487,7 +496,7 @@ a:focus:after {
 .icon a:after {
     display: block;
     content: "";
-    height: 3px;
+    height: 0;
     width: 0%;
     background-color: aqua;
     transition: all 0.8s;
@@ -582,6 +591,7 @@ a:focus:after {
     line-height: 16px;
     border-radius: 40px;
     padding: 12px;
+    border: 2px solid #F13C6E;
 }
 
 .title_call_1 a:before {
@@ -592,16 +602,16 @@ a:focus:after {
     background: blue;
     border-radius: 40px;
     top: 0;
-    left: 100%;
+    left: 0;
     opacity: 0.1;
     transition: all 1s;
     visibility: hidden;
 }
 
 .title_call_1 a:hover:before {
-    border: 2px solid #F13C6E;
     left: 0;
     visibility: visible;
+    opacity: 0.3;
 }
 
 .avatar_logo_image {
@@ -623,7 +633,7 @@ a:focus:after {
 .avatar_logo a:after {
     display: block;
     content: "";
-    height: 3px;
+    height: 0;
     width: 0%;
     background-color: red;
     transition: all 0.8s;
@@ -633,6 +643,12 @@ a:focus:after {
 
 .avatar_logo a:hover:after {
     width: 50%;
+}
+
+.avatar_logo_image:hover {
+    border: 3px solid blue;
+    transition: all 0.3s;
+
 }
 
 .footer_end {
